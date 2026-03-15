@@ -1,6 +1,9 @@
-UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faraja Real Estate | Luxury Homes & Plots in Lusaka, Zambia</title>
+    <title>Uzo Properties Zambia | Luxury Homes & Plots in Lusaka</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -83,14 +86,13 @@ UTF-8">
     </style>
 </head>
 <body class="tail-container bg-zinc-950 text-white overflow-x-hidden">
-    <!-- NAVBAR -->
     <nav class="bg-zinc-950 border-b border-zinc-800 fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 py-4 md:py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-2xl">🏠</div>
+                <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-xl md:text-2xl">🏠</div>
                 <div>
-                    <span class="text-3xl font-bold heading-font tracking-tight">FARAJA</span>
-                    <span class="text-amber-400 text-sm font-medium tracking-[4px] block -mt-1">REAL ESTATE</span>
+                    <span class="text-2xl md:text-3xl font-bold heading-font tracking-tight">UZO</span>
+                    <span class="text-amber-400 text-[10px] md:text-sm font-medium tracking-[2px] md:tracking-[4px] block -mt-1 md:-mt-2">PROPERTIES ZAMBIA</span>
                 </div>
             </div>
             
@@ -104,270 +106,271 @@ UTF-8">
 
             <div class="flex items-center gap-4">
                 <a href="https://wa.me/260977123456" target="_blank" 
-                   class="hidden md:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl text-sm font-semibold transition-all">
+                   class="hidden lg:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl text-sm font-semibold transition-all">
                     <i class="fab fa-whatsapp text-xl"></i>
                     <span>WhatsApp Us</span>
                 </a>
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
-                        class="bg-white text-zinc-950 px-8 py-3.5 rounded-2xl font-semibold hover:bg-amber-400 hover:text-white transition-all text-sm">
+                        class="hidden md:block bg-white text-zinc-950 px-8 py-3.5 rounded-2xl font-semibold hover:bg-amber-400 hover:text-white transition-all text-sm">
                     GET A QUOTE
+                </button>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl p-2">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-bg h-screen flex items-center relative">
+    <div id="mobile-menu" class="fixed inset-0 bg-zinc-950/98 backdrop-blur-xl z-[60] flex-col items-center justify-center gap-8 text-xl font-medium hidden transform transition-transform duration-300">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-zinc-400 hover:text-white p-4">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#hero" class="mobile-nav-link text-white hover:text-amber-400 transition">HOME</a>
+        <a href="#why-us" class="mobile-nav-link text-white hover:text-amber-400 transition">WHY US</a>
+        <a href="#gallery" class="mobile-nav-link text-white hover:text-amber-400 transition">GALLERY</a>
+        <a href="#faq" class="mobile-nav-link text-white hover:text-amber-400 transition">FAQ</a>
+        <a href="#contact" class="mobile-nav-link text-white hover:text-amber-400 transition">CONTACT</a>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.add('hidden');" 
+                class="mt-4 bg-amber-400 text-zinc-950 px-10 py-4 rounded-full font-bold">
+            GET A QUOTE
+        </button>
+    </div>
+
+    <section id="hero" class="hero-bg h-screen min-h-[600px] flex items-center relative">
         <div class="max-w-7xl mx-auto px-6 pt-20">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm mb-6">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-3xl text-xs md:text-sm mb-6">
                     <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span class="uppercase tracking-widest text-amber-300 text-xs font-medium">Lusaka, Zambia</span>
+                    <span class="uppercase tracking-widest text-amber-300 font-medium">Lusaka, Zambia</span>
                 </div>
                 
-                <h1 class="heading-font text-7xl md:text-8xl font-bold leading-none tracking-tighter mb-6">
+                <h1 class="heading-font text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter mb-6">
                     YOUR DREAM<br>HOME IN<br><span class="text-amber-400">ZAMBIA</span>
                 </h1>
                 
-                <p class="text-2xl text-zinc-300 mb-10 max-w-md">
+                <p class="text-lg md:text-2xl text-zinc-300 mb-8 md:mb-10 max-w-md">
                     Premium plots, luxury villas &amp; investment properties with ready title deeds. 
                     Fast transfers. Trusted by 500+ families.
                 </p>
                 
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
                     <button onclick="document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })" 
-                            class="bg-amber-400 hover:bg-amber-300 text-zinc-950 px-10 py-6 rounded-3xl font-semibold text-lg flex items-center gap-3 transition-all group">
+                            class="bg-amber-400 hover:bg-amber-300 text-zinc-950 px-8 py-4 md:px-10 md:py-6 rounded-3xl font-semibold text-base md:text-lg flex items-center justify-center gap-3 transition-all group">
                         BROWSE PROPERTIES
                         <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
                     </button>
                     
                     <a href="https://wa.me/260977123456" target="_blank"
-                       class="border border-white/70 hover:border-amber-400 px-8 py-6 rounded-3xl flex items-center gap-3 text-lg font-medium transition-all">
-                        <i class="fab fa-whatsapp text-2xl"></i>
+                       class="border border-white/70 hover:border-amber-400 px-8 py-4 md:py-6 rounded-3xl flex items-center justify-center gap-3 text-base md:text-lg font-medium transition-all">
+                        <i class="fab fa-whatsapp text-xl md:text-2xl"></i>
                         CHAT ON WHATSAPP
                     </a>
                 </div>
                 
-                <div class="mt-16 flex items-center gap-10 text-sm">
+                <div class="mt-12 md:mt-16 flex flex-wrap items-center gap-6 md:gap-10 text-xs md:text-sm">
                     <div>
-                        <div class="text-3xl font-semibold text-amber-400">500+</div>
+                        <div class="text-2xl md:text-3xl font-semibold text-amber-400">500+</div>
                         <div class="text-zinc-400">Happy Clients</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-semibold text-amber-400">98%</div>
+                        <div class="text-2xl md:text-3xl font-semibold text-amber-400">98%</div>
                         <div class="text-zinc-400">Title Deeds Ready</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-semibold text-amber-400">24h</div>
+                        <div class="text-2xl md:text-3xl font-semibold text-amber-400">24h</div>
                         <div class="text-zinc-400">Response Time</div>
                     </div>
                 </div>
             </div>
         </div>
+<div class="relative mx-auto mt-8 md:mt-12 bg-zinc-900/90 backdrop-blur-lg px-4 md:px-10 py-4 md:py-5 rounded-3xl flex flex-wrap justify-center items-center gap-4 md:gap-8 text-[10px] md:text-xs uppercase tracking-widest border border-amber-400/20 w-[90%] md:w-max">
+    <div class="flex items-center gap-2">
+        <i class="fas fa-check text-amber-400"></i>
+        <span>Ready Title Deeds</span>
+    </div>
+    <div class="hidden md:block h-4 w-px bg-white/20"></div>
+    <div class="flex items-center gap-2">
+        <i class="fas fa-check text-amber-400"></i>
+        <span>Fast Transfer</span>
+    </div>
+    <div class="hidden md:block h-4 w-px bg-white/20"></div>
+    <div class="flex items-center gap-2 w-full md:w-auto justify-center mt-2 md:mt-0">
+        <i class="fas fa-check text-amber-400"></i>
+        <span>100% Secure</span>
+    </div>
+</div>
 
-        <!-- Trust bar -->
-        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-zinc-900/90 backdrop-blur-lg px-10 py-5 rounded-3xl flex items-center gap-8 text-xs uppercase tracking-widest border border-amber-400/20">
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check text-amber-400"></i>
-                <span>Ready Title Deeds</span>
-            </div>
-            <div class="h-4 w-px bg-white/20"></div>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check text-amber-400"></i>
-                <span>Fast Transfer</span>
-            </div>
-            <div class="h-4 w-px bg-white/20"></div>
-            <div class="flex items-center gap-2">
-                <i class="fas fa-check text-amber-400"></i>
-                <span>100% Secure</span>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 flex flex-col items-center gap-2 text-xs tracking-widest">
+        <div class="hidden md:flex absolute bottom-4 left-1/2 flex-col items-center gap-2 text-xs tracking-widest">
             <span class="animate-bounce">SCROLL TO EXPLORE</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- WHY US SECTION -->
-    <section id="why-us" class="py-28 bg-zinc-900">
+    <section id="why-us" class="py-20 md:py-28 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="px-6 py-2 bg-amber-400/10 text-amber-400 text-sm font-semibold rounded-full">WHY CHOOSE FARAJA</span>
-                <h2 class="heading-font text-6xl font-bold mt-4 tracking-tight">We don't just sell property.<br>We deliver peace of mind.</h2>
+            <div class="text-center mb-12 md:mb-16">
+                <span class="px-6 py-2 bg-amber-400/10 text-amber-400 text-xs md:text-sm font-semibold rounded-full">WHY CHOOSE UZO PROPERTIES</span>
+                <h2 class="heading-font text-4xl md:text-6xl font-bold mt-6 tracking-tight">We don't just sell property.<br>We deliver peace of mind.</h2>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
-                    <div class="w-16 h-16 bg-amber-400/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">🇿🇲</div>
-                    <h3 class="text-2xl font-semibold mb-4">Local Expertise</h3>
-                    <p class="text-zinc-400">Born and raised in Lusaka. We know every suburb — from Kamwala to Ibex Hill to Chongwe — better than anyone.</p>
-                    <div class="mt-8 text-amber-400 text-sm font-medium flex items-center gap-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="bg-zinc-950 p-8 md:p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-amber-400/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-3xl md:text-4xl group-hover:scale-110 transition">🇿🇲</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Local Expertise</h3>
+                    <p class="text-sm md:text-base text-zinc-400">Born and raised in Lusaka. We know every suburb — from Kamwala to Ibex Hill to Chongwe — better than anyone.</p>
+                    <div class="mt-6 md:mt-8 text-amber-400 text-sm font-medium flex items-center gap-2">
                         15+ years in Zambia 
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
-                    <div class="w-16 h-16 bg-emerald-400/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">📜</div>
-                    <h3 class="text-2xl font-semibold mb-4">Ready Title Deeds</h3>
-                    <p class="text-zinc-400">Every plot and home comes with individual, clean title deeds. No waiting. No hidden fees. Instant ownership.</p>
-                    <div class="mt-8 text-emerald-400 text-sm font-medium">98% of our clients close in under 30 days</div>
+                <div class="bg-zinc-950 p-8 md:p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-emerald-400/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-3xl md:text-4xl group-hover:scale-110 transition">📜</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Ready Title Deeds</h3>
+                    <p class="text-sm md:text-base text-zinc-400">Every plot and home comes with individual, clean title deeds. No waiting. No hidden fees. Instant ownership.</p>
+                    <div class="mt-6 md:mt-8 text-emerald-400 text-sm font-medium">98% of our clients close in under 30 days</div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
-                    <div class="w-16 h-16 bg-rose-400/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">👨‍👩‍👧</div>
-                    <h3 class="text-2xl font-semibold mb-4">Personal Service</h3>
-                    <p class="text-zinc-400">Dedicated agent from first call to keys in hand. Private viewings. Flexible payment plans (Lipa Pole Pole).</p>
+                <div class="bg-zinc-950 p-8 md:p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-rose-400/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-3xl md:text-4xl group-hover:scale-110 transition">👨‍👩‍👧</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Personal Service</h3>
+                    <p class="text-sm md:text-base text-zinc-400">Dedicated agent from first call to keys in hand. Private viewings. Flexible payment plans (Lipa Pole Pole).</p>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
-                    <div class="w-16 h-16 bg-blue-400/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">📈</div>
-                    <h3 class="text-2xl font-semibold mb-4">Investment Guaranteed</h3>
-                    <p class="text-zinc-400">Properties in high-growth areas. Average 22% annual appreciation. We help you build generational wealth.</p>
+                <div class="bg-zinc-950 p-8 md:p-10 rounded-3xl border border-zinc-800 hover:border-amber-400/50 transition-all group">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-400/10 rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-3xl md:text-4xl group-hover:scale-110 transition">📈</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Investment Guaranteed</h3>
+                    <p class="text-sm md:text-base text-zinc-400">Properties in high-growth areas. Average 22% annual appreciation. We help you build generational wealth.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="py-28 bg-black">
+    <section id="gallery" class="py-20 md:py-28 bg-black">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-6">
                 <div>
-                    <span class="text-amber-400 text-sm font-semibold tracking-widest">CURATED COLLECTION</span>
-                    <h2 class="heading-font text-6xl font-bold tracking-tighter">Featured Properties</h2>
+                    <span class="text-amber-400 text-xs md:text-sm font-semibold tracking-widest">CURATED COLLECTION</span>
+                    <h2 class="heading-font text-4xl md:text-6xl font-bold tracking-tighter mt-2">Featured Properties</h2>
                 </div>
                 <a href="#" onclick="alert('Full listings coming soon — WhatsApp us!')" 
-                   class="text-amber-400 flex items-center gap-3 group text-lg">
+                   class="text-amber-400 flex items-center gap-3 group text-base md:text-lg whitespace-nowrap">
                     VIEW ALL 
                     <span class="group-hover:translate-x-3 transition">→</span>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Property 1 -->
                 <div class="property-card bg-zinc-900 rounded-3xl overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1613977257592-9f6c1c6c0e0c" 
-                         class="w-full h-80 object-cover" alt="Luxury Villa Kamwala">
-                    <div class="p-8">
+                         class="w-full h-64 md:h-80 object-cover" alt="Luxury Villa Kamwala">
+                    <div class="p-6 md:p-8">
                         <div class="flex justify-between items-start">
                             <div>
-                                <div class="text-amber-400 text-sm">KAMWALA SOUTH • LUSAKA</div>
-                                <div class="text-3xl font-semibold mt-1">3-Bedroom Luxury Villa</div>
-                                <div class="text-zinc-400 mt-1">K1,850,000 • Ready Title</div>
+                                <div class="text-amber-400 text-xs md:text-sm font-semibold tracking-wider">KAMWALA SOUTH • LUSAKA</div>
+                                <div class="text-2xl md:text-3xl font-semibold mt-2">3-Bedroom Luxury Villa</div>
+                                <div class="text-zinc-400 mt-2 text-sm md:text-base">K1,850,000 • Ready Title</div>
                             </div>
                             <div class="text-right">
-                                <div class="bg-green-500 text-xs px-4 py-1 rounded-full inline-block">For Sale</div>
+                                <div class="bg-green-500 text-xs px-3 md:px-4 py-1 rounded-full inline-block font-medium">For Sale</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Property 2 -->
                 <div class="property-card bg-zinc-900 rounded-3xl overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" 
-                         class="w-full h-80 object-cover" alt="Modern Plot Chongwe">
-                    <div class="p-8">
+                         class="w-full h-64 md:h-80 object-cover" alt="Modern Plot Chongwe">
+                    <div class="p-6 md:p-8">
                         <div class="flex justify-between items-start">
                             <div>
-                                <div class="text-amber-400 text-sm">CHONGWE • 2,500sqm</div>
-                                <div class="text-3xl font-semibold mt-1">Prime Residential Plot</div>
-                                <div class="text-zinc-400 mt-1">K950,000 • Borehole + Fence</div>
+                                <div class="text-amber-400 text-xs md:text-sm font-semibold tracking-wider">CHONGWE • 2,500sqm</div>
+                                <div class="text-2xl md:text-3xl font-semibold mt-2">Prime Residential Plot</div>
+                                <div class="text-zinc-400 mt-2 text-sm md:text-base">K950,000 • Borehole + Fence</div>
                             </div>
                             <div class="text-right">
-                                <div class="bg-green-500 text-xs px-4 py-1 rounded-full inline-block">For Sale</div>
+                                <div class="bg-green-500 text-xs px-3 md:px-4 py-1 rounded-full inline-block font-medium">For Sale</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Property 3 -->
                 <div class="property-card bg-zinc-900 rounded-3xl overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde" 
-                         class="w-full h-80 object-cover" alt="Ibex Hill Apartment">
-                    <div class="p-8">
+                         class="w-full h-64 md:h-80 object-cover" alt="Ibex Hill Apartment">
+                    <div class="p-6 md:p-8">
                         <div class="flex justify-between items-start">
                             <div>
-                                <div class="text-amber-400 text-sm">IBEX HILL • LUSAKA</div>
-                                <div class="text-3xl font-semibold mt-1">4-Bedroom Executive Home</div>
-                                <div class="text-zinc-400 mt-1">K2,950,000 • Pool &amp; Garden</div>
+                                <div class="text-amber-400 text-xs md:text-sm font-semibold tracking-wider">IBEX HILL • LUSAKA</div>
+                                <div class="text-2xl md:text-3xl font-semibold mt-2">4-Bedroom Executive Home</div>
+                                <div class="text-zinc-400 mt-2 text-sm md:text-base">K2,950,000 • Pool &amp; Garden</div>
                             </div>
                             <div class="text-right">
-                                <div class="bg-green-500 text-xs px-4 py-1 rounded-full inline-block">For Sale</div>
+                                <div class="bg-green-500 text-xs px-3 md:px-4 py-1 rounded-full inline-block font-medium">For Sale</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-16">
+            <div class="text-center mt-12 md:mt-16">
                 <button onclick="alert('Full portfolio available on WhatsApp — message us your budget and area!')" 
-                        class="border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-zinc-950 px-12 py-6 rounded-3xl text-lg font-medium transition-all">
+                        class="border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-zinc-950 px-8 py-4 md:px-12 md:py-6 rounded-3xl text-sm md:text-lg font-medium transition-all w-full sm:w-auto">
                     SEE 50+ MORE PROPERTIES →
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-28 bg-zinc-900">
+    <section id="faq" class="py-20 md:py-28 bg-zinc-900">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-amber-400 uppercase text-sm font-medium">Got questions?</span>
-                <h2 class="heading-font text-6xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-amber-400 uppercase text-xs md:text-sm font-medium">Got questions?</span>
+                <h2 class="heading-font text-4xl md:text-6xl font-bold tracking-tight mt-2">Frequently Asked Questions</h2>
             </div>
 
-            <div class="space-y-6">
-                <!-- FAQ 1 -->
-                <div class="faq-item bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800">
+            <div class="space-y-4 md:space-y-6">
+                <div class="faq-item bg-zinc-950 rounded-2xl md:rounded-3xl overflow-hidden border border-zinc-800">
                     <button onclick="toggleFaq(this)" 
-                            class="faq-question w-full px-10 py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
-                        <span class="text-2xl font-medium">How fast can I get title deeds?</span>
-                        <i class="fas fa-chevron-down transition-transform faq-icon"></i>
+                            class="faq-question w-full px-6 py-6 md:px-10 md:py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span class="text-lg md:text-2xl font-medium pr-4">How fast can I get title deeds?</span>
+                        <i class="fas fa-chevron-down transition-transform faq-icon text-amber-400"></i>
                     </button>
-                    <div class="faq-answer hidden px-10 pb-8 text-zinc-400">
+                    <div class="faq-answer hidden px-6 pb-6 md:px-10 md:pb-8 text-sm md:text-base text-zinc-400">
                         Most of our properties come with ready individual title deeds. Transfer can be completed in as little as 7–14 days with our in-house lawyers.
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="faq-item bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800">
+                <div class="faq-item bg-zinc-950 rounded-2xl md:rounded-3xl overflow-hidden border border-zinc-800">
                     <button onclick="toggleFaq(this)" 
-                            class="faq-question w-full px-10 py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
-                        <span class="text-2xl font-medium">Do you offer payment plans?</span>
-                        <i class="fas fa-chevron-down transition-transform faq-icon"></i>
+                            class="faq-question w-full px-6 py-6 md:px-10 md:py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span class="text-lg md:text-2xl font-medium pr-4">Do you offer payment plans?</span>
+                        <i class="fas fa-chevron-down transition-transform faq-icon text-amber-400"></i>
                     </button>
-                    <div class="faq-answer hidden px-10 pb-8 text-zinc-400">
+                    <div class="faq-answer hidden px-6 pb-6 md:px-10 md:pb-8 text-sm md:text-base text-zinc-400">
                         Yes! Lipa Pole Pole — 30% deposit and spread the balance over 12–36 months with zero interest for qualified buyers.
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
-                <div class="faq-item bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800">
+                <div class="faq-item bg-zinc-950 rounded-2xl md:rounded-3xl overflow-hidden border border-zinc-800">
                     <button onclick="toggleFaq(this)" 
-                            class="faq-question w-full px-10 py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
-                        <span class="text-2xl font-medium">Are the properties in safe areas?</span>
-                        <i class="fas fa-chevron-down transition-transform faq-icon"></i>
+                            class="faq-question w-full px-6 py-6 md:px-10 md:py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span class="text-lg md:text-2xl font-medium pr-4">Are the properties in safe areas?</span>
+                        <i class="fas fa-chevron-down transition-transform faq-icon text-amber-400"></i>
                     </button>
-                    <div class="faq-answer hidden px-10 pb-8 text-zinc-400">
+                    <div class="faq-answer hidden px-6 pb-6 md:px-10 md:pb-8 text-sm md:text-base text-zinc-400">
                         All our listings are in secure, gated, or high-demand suburbs with 24/7 security options available. We only work with verified developers.
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
-                <div class="faq-item bg-zinc-950 rounded-3xl overflow-hidden border border-zinc-800">
+                <div class="faq-item bg-zinc-950 rounded-2xl md:rounded-3xl overflow-hidden border border-zinc-800">
                     <button onclick="toggleFaq(this)" 
-                            class="faq-question w-full px-10 py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
-                        <span class="text-2xl font-medium">Can non-Zambians buy property?</span>
-                        <i class="fas fa-chevron-down transition-transform faq-icon"></i>
+                            class="faq-question w-full px-6 py-6 md:px-10 md:py-8 text-left flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span class="text-lg md:text-2xl font-medium pr-4">Can non-Zambians buy property?</span>
+                        <i class="fas fa-chevron-down transition-transform faq-icon text-amber-400"></i>
                     </button>
-                    <div class="faq-answer hidden px-10 pb-8 text-zinc-400">
+                    <div class="faq-answer hidden px-6 pb-6 md:px-10 md:pb-8 text-sm md:text-base text-zinc-400">
                         Yes! Foreign investors are welcome. We handle all paperwork and can arrange company registration if needed.
                     </div>
                 </div>
@@ -375,93 +378,87 @@ UTF-8">
         </div>
     </section>
 
-    <!-- LAST SECTION: CONTACT + TESTIMONIALS -->
-    <section id="contact" class="py-28 bg-black relative">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-            <!-- Left: Testimonials -->
-            <div>
-                <div class="text-amber-400 text-sm font-medium mb-4">WHAT OUR CLIENTS SAY</div>
-                <div class="space-y-12">
-                    <div class="flex gap-6">
-                        <div class="w-14 h-14 bg-zinc-800 rounded-2xl flex-shrink-0"></div>
+    <section id="contact" class="py-20 md:py-28 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="text-amber-400 text-xs md:text-sm font-medium mb-6">WHAT OUR CLIENTS SAY</div>
+                <div class="space-y-8 md:space-y-12">
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-zinc-800 rounded-2xl flex-shrink-0 flex items-center justify-center text-amber-400 text-xl"><i class="fas fa-quote-left"></i></div>
                         <div>
-                            <p class="italic text-lg">"Faraja helped us buy our dream home in Ibex Hill with title deed in just 18 days. Professional, transparent, and truly cares about clients."</p>
-                            <div class="mt-4 font-medium">— Dr. Mwamba &amp; Family</div>
+                            <p class="italic text-base md:text-lg text-zinc-300">"Uzo Properties helped us buy our dream home in Ibex Hill with title deed in just 18 days. Professional, transparent, and truly cares about clients."</p>
+                            <div class="mt-3 md:mt-4 font-medium text-white">— Dr. Mwamba &amp; Family</div>
                         </div>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="w-14 h-14 bg-zinc-800 rounded-2xl flex-shrink-0"></div>
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-6">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-zinc-800 rounded-2xl flex-shrink-0 flex items-center justify-center text-amber-400 text-xl"><i class="fas fa-quote-left"></i></div>
                         <div>
-                            <p class="italic text-lg">"Bought a 2,000sqm plot in Chongwe. Payment plan was easy and the land is already appreciating. Best decision we ever made."</p>
-                            <div class="mt-4 font-medium">— Chishimba K., Investor</div>
+                            <p class="italic text-base md:text-lg text-zinc-300">"Bought a 2,000sqm plot in Chongwe. Payment plan was easy and the land is already appreciating. Best decision we ever made."</p>
+                            <div class="mt-3 md:mt-4 font-medium text-white">— Chishimba K., Investor</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Contact Form -->
-            <div class="bg-zinc-900 rounded-3xl p-10 md:p-14">
-                <h2 class="heading-font text-5xl font-bold mb-2">Let's find your home</h2>
-                <p class="text-zinc-400 mb-10">Fill the form or WhatsApp us right now. Reply guaranteed within 60 minutes.</p>
+            <div class="bg-zinc-900 rounded-[2rem] p-8 md:p-14 order-1 lg:order-2 border border-zinc-800">
+                <h2 class="heading-font text-3xl md:text-5xl font-bold mb-3 md:mb-4">Let's find your home</h2>
+                <p class="text-sm md:text-base text-zinc-400 mb-8 md:mb-10">Fill the form or WhatsApp us right now. Reply guaranteed within 60 minutes.</p>
                 
-                <form onsubmit="submitForm(event)" class="space-y-8">
-                    <div class="grid grid-cols-2 gap-6">
-                        <input type="text" placeholder="First Name" 
-                               class="bg-transparent border border-zinc-700 focus:border-amber-400 rounded-2xl px-6 py-6 text-lg outline-none">
-                        <input type="text" placeholder="Last Name" 
-                               class="bg-transparent border border-zinc-700 focus:border-amber-400 rounded-2xl px-6 py-6 text-lg outline-none">
+                <form onsubmit="submitForm(event)" class="space-y-5 md:space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                        <input type="text" placeholder="First Name" required
+                               class="bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-2xl px-5 py-4 md:px-6 md:py-5 text-base md:text-lg outline-none w-full transition">
+                        <input type="text" placeholder="Last Name" required
+                               class="bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-2xl px-5 py-4 md:px-6 md:py-5 text-base md:text-lg outline-none w-full transition">
                     </div>
                     
-                    <input type="tel" placeholder="Phone / WhatsApp (+260)" 
-                           class="w-full bg-transparent border border-zinc-700 focus:border-amber-400 rounded-2xl px-6 py-6 text-lg outline-none">
+                    <input type="tel" placeholder="Phone / WhatsApp (+260)" required
+                           class="w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-2xl px-5 py-4 md:px-6 md:py-5 text-base md:text-lg outline-none transition">
                     
                     <input type="email" placeholder="Email (optional)" 
-                           class="w-full bg-transparent border border-zinc-700 focus:border-amber-400 rounded-2xl px-6 py-6 text-lg outline-none">
+                           class="w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-2xl px-5 py-4 md:px-6 md:py-5 text-base md:text-lg outline-none transition">
                     
-                    <textarea placeholder="Tell us what you're looking for (budget, area, bedrooms...)" rows="4"
-                              class="w-full bg-transparent border border-zinc-700 focus:border-amber-400 rounded-3xl px-6 py-6 text-lg outline-none resize-none"></textarea>
+                    <textarea placeholder="Tell us what you're looking for (budget, area, bedrooms...)" rows="4" required
+                              class="w-full bg-zinc-950 border border-zinc-700 focus:border-amber-400 rounded-3xl px-5 py-4 md:px-6 md:py-5 text-base md:text-lg outline-none resize-none transition"></textarea>
                     
                     <button type="submit"
-                            class="w-full bg-gradient-to-r from-amber-400 to-yellow-600 text-zinc-950 font-semibold py-7 rounded-3xl text-xl hover:scale-105 transition">
-                        SEND MESSAGE — LET'S TALK PROPERTY
+                            class="w-full bg-gradient-to-r from-amber-400 to-yellow-600 text-zinc-950 font-bold py-5 md:py-6 rounded-3xl text-sm md:text-lg hover:scale-[1.02] transition-transform shadow-lg shadow-amber-500/20 uppercase tracking-wide">
+                        Send Message — Let's Talk Property
                     </button>
                 </form>
             </div>
         </div>
 
-        <!-- Floating WhatsApp -->
-        <a href="https://wa.me/260977123456?text=Hi%20Faraja%20Real%20Estate%2C%20I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20properties%20in%20Lusaka" 
+        <a href="https://wa.me/260977123456?text=Hi%20Uzo%20Properties%20Zambia%2C%20I%20saw%20your%20website%20and%20want%20to%20know%20more%20about%20properties%20in%20Lusaka" 
            target="_blank"
-           class="whatsapp-float fixed bottom-8 right-8 bg-green-500 w-16 h-16 rounded-3xl flex items-center justify-center shadow-2xl text-4xl z-50 hover:scale-110 transition">
+           class="whatsapp-float fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-green-500 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl text-3xl md:text-4xl z-40 hover:scale-110 transition">
             <i class="fab fa-whatsapp"></i>
         </a>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 py-16">
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex justify-center items-center gap-3 mb-8">
-                <div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-2xl">🏠</div>
-                <span class="text-4xl font-bold heading-font">FARAJA REAL ESTATE</span>
+            <div class="flex justify-center items-center gap-2 md:gap-3 mb-6 md:mb-8">
+                <div class="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-sm md:text-2xl">🏠</div>
+                <span class="text-2xl md:text-4xl font-bold heading-font">UZO PROPERTIES ZAMBIA</span>
             </div>
-            <p class="text-zinc-500 max-w-md mx-auto">Premium real estate in Lusaka &amp; surrounding areas. Ready title deeds • Fast transfers • Trusted since 2018</p>
+            <p class="text-zinc-500 max-w-md mx-auto text-sm md:text-base px-4">Premium real estate in Lusaka &amp; surrounding areas. Ready title deeds • Fast transfers • Trusted since 2018</p>
             
-            <div class="mt-12 text-sm text-zinc-400 flex flex-col md:flex-row justify-center gap-6">
-                <a href="#" class="hover:text-white">Privacy Policy</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="https://wa.me/260977123456" class="hover:text-white">WhatsApp: +260 977 123 456</a>
+            <div class="mt-10 md:mt-12 text-xs md:text-sm text-zinc-400 flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="https://wa.me/260977123456" class="hover:text-white transition">WhatsApp: +260 977 123 456</a>
                 <span>Lusaka, Zambia</span>
             </div>
             
-            <div class="mt-20 text-[10px] text-zinc-600">
-                © 2026 Faraja Real Estate Zambia • Built for high conversions
+            <div class="mt-16 md:mt-20 text-[10px] md:text-xs text-zinc-600 uppercase tracking-widest">
+                © 2026 Uzo Properties Zambia • Built for high conversions
             </div>
         </div>
     </footer>
 
     <script>
-        // Tailwind script already loaded
-        
+        // FAQ Toggle Logic
         function toggleFaq(btn) {
             const answer = btn.nextElementSibling;
             const icon = btn.querySelector('.faq-icon');
@@ -475,22 +472,45 @@ UTF-8">
             }
         }
         
+        // Form Submission Logic
         function submitForm(e) {
             e.preventDefault();
-            alert("✅ Thank you! Your message has been received. We'll WhatsApp you within 30 minutes. Welcome to the Faraja family! 🏡");
+            alert("✅ Thank you! Your message has been received. We'll WhatsApp you within 30 minutes. Welcome to the Uzo Properties family! 🏡");
             e.target.reset();
         }
         
-        // Smooth scroll for nav
+        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 if (this.getAttribute('href') === '#') return;
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
+                
+                // Close mobile menu if it's open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
         });
         
         // Fake live visitor count (for conversion psychology)
